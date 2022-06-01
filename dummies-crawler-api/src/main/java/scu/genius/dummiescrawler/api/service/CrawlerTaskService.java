@@ -11,6 +11,7 @@ import scu.genius.dummiescrawler.core.mapper.CrawlerTaskMapper;
 import scu.genius.dummiescrawler.core.pojo.Response;
 
 import javax.annotation.Resource;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,5 +66,13 @@ public class CrawlerTaskService {
         result.put("crawlerTasks", crawlerTaskPage.getRecords());
         result.put("count", crawlerTaskPage.getTotal());
         return Response.builder().code(200).message("查询爬虫任务成功").data(result).build();
+    }
+
+    public CrawlerTask insert(Long flowId) {
+        CrawlerTask crawlerTask = new CrawlerTask();
+        crawlerTask.setFlowId(flowId);
+        crawlerTask.setBeginTime(new Timestamp(System.currentTimeMillis()));
+        crawlerTaskMapper.insert(crawlerTask);
+        return crawlerTask;
     }
 }

@@ -9,5 +9,8 @@ spring:
     username: "root"
     password: "02080328"
 
+spider:
+  workspace: /data/spider
+
 server:
   port: 8080

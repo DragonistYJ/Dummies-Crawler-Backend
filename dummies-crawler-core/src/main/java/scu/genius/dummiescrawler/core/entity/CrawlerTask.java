@@ -45,4 +45,7 @@ public class CrawlerTask {
 
     @TableField(value = "enable")
     private Boolean enable;
+
+    @TableField(value = "status")
+    private String status;
 }
