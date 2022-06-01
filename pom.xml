@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dummies-crawler-api</module>
+        <module>dummies-crawler-core</module>
     </modules>
     <packaging>pom</packaging>
 

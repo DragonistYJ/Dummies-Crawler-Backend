@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: dummies-crawler-api
+  webflux:
+    base-path: /dummies-crawler
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dummies_crawler
+    username: "root"
+    password: "02080328"
+
+server:
+  port: 8080
